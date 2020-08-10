@@ -46,7 +46,7 @@ This is a basic web app to illustrate deployment on Microsoft IIS, Apache + mod_
 7. Open Internet Information Services (IIS) Manager. Under connections select the server, then in the center pane under Management select Configuration Editor. Under Section select system.webServer/handlers. Under Section select Unlock Section. This is required because the `C:/inetpub/wwwroot/web.config` creates a [route handler](https://pypi.org/project/wfastcgi/#route-handlers) for our project.
 
 
-8. Add Virtual Directory. In order to enable serving static files map a static alias to the static directory, `C:/inetpub/wwwroot/webproject/static/`, this directory includes the second `web.config` file.
+8. Add Virtual Directory. In order to enable serving static files map a static alias to the static directory, `C:/inetpub/wwwroot/webproject/static/`, this directory includes the second `web.config` file, collect static files by running `python manage.py collectstatic` in the CMD terminal as Administrator
 
 9. Refresh the server and navigate to `localhost`
 
